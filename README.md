@@ -1,6 +1,6 @@
 # Wezza
 
-This disolays weather information from forecast.io.
+This displays weather information from forecast.io.
 
 ## Next steps
 
