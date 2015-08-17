@@ -4,7 +4,7 @@
         <p class="header-detail"><%= @lat %>N, <%= @lon %>E</p>
     </header>
 
-    <%= react_component('Forecast', lat: @lat, lon: @lon, label: @label, forecastApi: forecast_data_path) %>
+    <%= react_component('Forecast', lat: @lat, lon: @lon, label: @label, forecastApi: @forecast_api) %>
 </main>
 
 <aside>

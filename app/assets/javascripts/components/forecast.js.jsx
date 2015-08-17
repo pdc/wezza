@@ -54,7 +54,7 @@ var ForecastPart = React.createClass({
                 <small>Feels like {data.apparentTemperature}°</small>
             </div>);
         return (
-            <div className={data.icon}>
+            <div className={'forecast-part forecast-part-' + data.icon}>
                 <h2>{this.props.title}</h2>
                 <div className="forecast-part-summary">{data.summary}</div>
                 {temperaturePart}
@@ -108,7 +108,6 @@ var Forecast = React.createClass({
                 {forecast.minutely && <ForecastPart key="hour" title="Next hour" data={forecast.minutely} />}
                 <ForecastPart key="hourly" title="Next day" data={forecast.hourly} />
                 <ForecastPart key="daily" title="Next week" data={forecast.daily} />
-                <p>Time zone: {forecast.timezone}</p>
             </div>);
     },
 });

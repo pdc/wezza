@@ -5,7 +5,7 @@
 
 $fnt-fam: Helvetica Neue, Arial, Helvetica, sans-serif;
 $hl-clr: #B0A;
-$bnr-clr: #9CF;
+$bnr-clr: #A0B;
 
 body {
     padding: 0;
@@ -16,14 +16,22 @@ body {
     line-height: 1.25;
 }
 
+header {
+    color: #FFF;
+    background-color: $bnr-clr;
+}
+
 h1 {
     margin: 0 0 10px;
     padding: 10px 10px;
 
     font-size: 20px;
     font-weight: 200;
-    color: #FFF;
-    background-color: $bnr-clr;
+}
+
+.header-detail {
+    font-size: 13px;
+    line-height: 16px;
 }
 
 p {

@@ -1,3 +1,81 @@
-// Place all the styles related to the forecast controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.forecast-part {
+    padding: 10px 0;
+}
+
+.forecast-part-clear-day {
+    color: #333;
+    background: #9CF;
+}
+
+.forecast-part-clear-night {
+    color: #CAB;
+    background: #000;
+}
+
+.forecast-part-rain {
+    color: #333;
+    background: #99C;
+}
+
+.forecast-part-snow {
+    color: #123;
+    background: #FFF;
+}
+
+.forecast-part-sleet {
+    color: #123;
+    background: #CCD;
+}
+
+.forecast-part-wind {
+    color: #123;
+    background: #9CF;
+}
+
+.forecast-part-fog {
+    color: #666;
+    background: #DDD;
+}
+
+.forecast-part-cloudy {
+    color: #333;
+    background: #EEE;
+}
+
+.forecast-part-partly-cloudy-day {
+    color: #333;
+    background: #DEF;
+}
+
+.forecast-part-partly-cloudy-night {
+    color: #DDD;
+    background: #444;
+}
+
+h2 {
+    margin: 0 10px;
+
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 16px;
+}
+
+.forecast-part-summary {
+    margin: 5px 10px 10px;
+}
+
+.forecast-part-temperature {
+    margin: 10px;
+
+    b {
+        display: block;
+
+        font-size: 40px;
+        line-height: 50px;
+    }
+    small {
+        display: block;
+
+        font-size: 13px;
+    }
+}

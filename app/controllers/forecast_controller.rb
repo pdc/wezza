@@ -6,6 +6,9 @@ class ForecastController < ApplicationController
     @lat = p[:lat].to_f
     @lon = p[:lon].to_f
     @label = p[:label]
+
+    @forecast_api = forecast_data_path
+    @forecast_api = '/forecast_data.json'  # Static data for testing
   end
 
   def data
