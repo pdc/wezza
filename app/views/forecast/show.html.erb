@@ -1,9 +1,11 @@
-<main>
-    <header>
-        <h1><%= @label %></h1>
-        <p class="header-detail"><%= @lat %>N, <%= @lon %>E</p>
-    </header>
 
+<header>
+    <h1><%= @label %></h1>
+    <p class="header-location"><%= @lat %>N, <%= @lon %>E</p>
+    <%= link_to 'Locations', root_path, class: 'lnk-back' %>
+</header>
+
+<main>
     <%= react_component('Forecast', lat: @lat, lon: @lon, label: @label, forecastApi: @forecast_api) %>
 </main>
 

@@ -6,6 +6,32 @@
   font-style: normal;
 }
 
+@mixin weather-icon {
+    font-family: 'weathericons';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.header-location {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    font-size: 13px;
+}
+
+.forecast-loading {
+    height: 100px;
+
+    background-image: url(ajax-loader.gif);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
 .forecast-part {
     padding: 10px 0;
 
@@ -15,17 +41,11 @@
         width: 50px;
 
         font-size: 40px;
-        font-family: 'weathericons';
-        font-style: normal;
-        font-weight: normal;
-        line-height: 1;
-        text-align: center;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
+        @include weather-icon;
     }
 }
 
-.forecast-part-clear-day {
+.clear-day {
     color: #333;
     background: #9CF;
 
@@ -34,8 +54,8 @@
     }
 }
 
-.forecast-part-clear-night {
-    color: #CAB;
+.clear-night {
+    color: #DDD;
     background: #000;
 
     &:before {
@@ -43,7 +63,7 @@
     }
 }
 
-.forecast-part-rain {
+.rain {
     color: #333;
     background: #99C;
 
@@ -52,7 +72,7 @@
     }
 }
 
-.forecast-part-snow {
+.snow {
     color: #123;
     background: #FFF;
 
@@ -61,7 +81,7 @@
     }
 }
 
-.forecast-part-sleet {
+.sleet {
     color: #123;
     background: #CCD;
 
@@ -70,7 +90,7 @@
     }
 }
 
-.forecast-part-wind {
+.wind {
     color: #123;
     background: #9CF;
 
@@ -79,7 +99,7 @@
     }
 }
 
-.forecast-part-fog {
+.fog {
     color: #666;
     background: #DDD;
 
@@ -88,7 +108,7 @@
     }
 }
 
-.forecast-part-cloudy {
+.cloudy {
     color: #333;
     background: #EEE;
 
@@ -97,7 +117,7 @@
     }
 }
 
-.forecast-part-partly-cloudy-day {
+.partly-cloudy-day {
     color: #333;
     background: #DEF;
 
@@ -106,7 +126,7 @@
     }
 }
 
-.forecast-part-partly-cloudy-night {
+.partly-cloudy-night {
     color: #DDD;
     background: #444;
 
@@ -143,15 +163,57 @@ h2 {
     }
 }
 
+h3 {
+    margin: 0 10px;
+
+    font-size: 13px;
+    line-height: 18px;
+
+    .forecast-detail-collapsed &:before {
+        content: '►';
+    }
+    .forecast-detail-expanded &:before {
+        content: '▼';
+    }
+}
+
+.forecast-detail-expanded {
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    tr {
+        &:before {
+            @include weather-icon;
+
+            float: left;
+            width: 40px;
+            padding: 5px 0;
+
+            font-size: 20px;
+            line-height: 20px;
+        }
+    }
+    td {
+        margin: 0;
+        padding: 5px 10px;
+
+        vertical-align: top;
+        line-height: 20px;
+    }
+}
+
 
 .credit {
+    position: fixed;
+    right: 0;
+    bottom: 0;
     margin: 0;
     padding: 20px 10px 5px;
 
     font-size: 13px;
     line-height: 16px;
     text-align: right;
-    background-color: #999;
 
     a {
         white-space: nowrap;
