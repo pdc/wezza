@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'forecast/show'
+  get 'forecast/data'
 
   root 'welcome#index'
 
