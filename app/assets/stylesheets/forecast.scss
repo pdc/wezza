@@ -1,55 +1,118 @@
+@font-face {
+  font-family: 'weathericons';
+  src: url('weathericons-regular-webfont.eot');
+  src: url('weathericons-regular-webfont.eot?#iefix') format('embedded-opentype'), url('weathericons-regular-webfont.woff2') format('woff2'), url('weathericons-regular-webfont.woff') format('woff'), url('weathericons-regular-webfont.ttf') format('truetype'), url('weathericons-regular-webfont.svg#weather_iconsregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .forecast-part {
     padding: 10px 0;
+
+    &:before {
+        float: right;
+        margin: 5px 10px 10px;
+        width: 50px;
+
+        font-size: 40px;
+        font-family: 'weathericons';
+        font-style: normal;
+        font-weight: normal;
+        line-height: 1;
+        text-align: center;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
 }
 
 .forecast-part-clear-day {
     color: #333;
     background: #9CF;
+
+    &:before {
+        content: '\f00d';
+    }
 }
 
 .forecast-part-clear-night {
     color: #CAB;
     background: #000;
+
+    &:before {
+        content: '\f02e';
+    }
 }
 
 .forecast-part-rain {
     color: #333;
     background: #99C;
+
+    &:before {
+        content: '\f04e';
+    }
 }
 
 .forecast-part-snow {
     color: #123;
     background: #FFF;
+
+    &:before {
+        content: '\f01b';
+    }
 }
 
 .forecast-part-sleet {
     color: #123;
     background: #CCD;
+
+    &:before {
+        content: '\f0b5';
+    }
 }
 
 .forecast-part-wind {
     color: #123;
     background: #9CF;
+
+    &:before {
+        content: '\f050';
+    }
 }
 
 .forecast-part-fog {
     color: #666;
     background: #DDD;
+
+    &:before {
+        content: '\f014';
+    }
 }
 
 .forecast-part-cloudy {
     color: #333;
     background: #EEE;
+
+    &:before {
+        content: '\f013';
+    }
 }
 
 .forecast-part-partly-cloudy-day {
     color: #333;
     background: #DEF;
+
+    &:before {
+        content: '\f002';
+    }
 }
 
 .forecast-part-partly-cloudy-night {
     color: #DDD;
     background: #444;
+
+    &:before {
+        content: '\f086';
+    }
 }
 
 h2 {
@@ -77,5 +140,21 @@ h2 {
         display: block;
 
         font-size: 13px;
+    }
+}
+
+
+.credit {
+    margin: 0;
+    padding: 20px 10px 5px;
+
+    font-size: 13px;
+    line-height: 16px;
+    text-align: right;
+    background-color: #999;
+
+    a {
+        white-space: nowrap;
+        color: inherit;
     }
 }

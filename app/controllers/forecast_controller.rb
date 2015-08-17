@@ -8,7 +8,7 @@ class ForecastController < ApplicationController
     @label = p[:label]
 
     @forecast_api = forecast_data_path
-    @forecast_api = '/forecast_data.json'  # Static data for testing
+    # @forecast_api = '/forecast_data.json'  # Static data for testing
   end
 
   def data
