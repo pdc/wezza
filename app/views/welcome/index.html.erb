@@ -1,0 +1,11 @@
+<main id="welcome" class="welcome">
+    <h1>Wezza</h1>
+    <p>Choose a town</p>
+    <ul>
+<% @presets.each do |preset| %>
+        <li class="forecast-lnk">
+            <%= link_to preset[:label], forecast_show_path(lat: preset[:lat], lon: preset[:lon], label: preset[:label]) %>
+        </li>
+<% end %>
+    </ul>
+</main>
