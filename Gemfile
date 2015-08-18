@@ -54,3 +54,10 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0'
 end
 
+
+group :production do
+    # Add support for Heroku’s 12-factor isolation policy
+    gem 'rails_12factor'
+end
+
+ruby '2.2.2'
