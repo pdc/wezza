@@ -65,7 +65,7 @@ var ForecastDetail = React.createClass({
         if (!this.state.isExpanded) {
             return (
                 <div className="forecast-detail-collapsed">
-                    <h3 onClick={this.handleClick}>Show more</h3>
+                    <h3><a onClick={this.handleClick}>Show more</a></h3>
                 </div>);
         }
 
@@ -90,7 +90,7 @@ var ForecastDetail = React.createClass({
         });
         return (
             <div className="forecast-detail-expanded">
-                <h3 onClick={this.handleClick}>Show less</h3>
+                <h3><a href="#" onClick={this.handleClick}>Show less</a></h3>
                 <table>
                     <tbody>
                         {tableRows}
