@@ -11,3 +11,5 @@ registration and profile UI on photorowd.com.
 
 I also had planned to turn the temperature and rain data in the forecast in to
 bar charts using Raphaël or similar.
+
+A real production app wouild use a CDN to serve its static assets.
