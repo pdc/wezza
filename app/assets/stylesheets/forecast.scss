@@ -168,6 +168,13 @@ h3 {
 
     font-size: 13px;
     line-height: 18px;
+    font-weight: 400;
+
+    a {
+        color: inherit;
+        text-decoration: none;
+        cursor: pointer;
+    }
 
     .forecast-detail-collapsed &:before {
         content: '►';
