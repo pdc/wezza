@@ -13,10 +13,16 @@ RSpec.describe ForecastController, type: :controller do
 
             expect(assigns(:label)).to eq('Oxford')
         end
-        it "doesnt include @forecast_api" do
+        it "assigns @forecast_api" do
             get :show
 
-            expect(assigns(:forecast_api)).to be_nil
+            expect(assigns(:forecast_api)).not_to be_nil
+            expect(assigns(:forecast_api)).not_to include('forecast.io//')
+        end
+        it "doesn’t assign @forecast_api to remote URL" do
+            get :show
+
+            expect(assigns(:forecast_api)).not_to include('forecast.io//')
         end
     end
 end
