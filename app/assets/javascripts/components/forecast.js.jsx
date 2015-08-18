@@ -36,13 +36,13 @@ class ForecastSource {
         })
         .always(() => {
             if (this.callbacks[k]) {
-                this.callbacks[k]();
+                this.callbacks[k](this);
             }
         });
     }
 }
 
-var forecastSource = new ForecastSource();
+const forecastSource = new ForecastSource();
 
 
 const daysOfWeek = ['Su', 'M', 'T', 'W', 'Th', 'F', 'Sa'];
@@ -138,7 +138,7 @@ var Forecast = React.createClass({
         }
     },
 
-    handleForecastReady: function () {
+    handleForecastReady: function (forecastSource) {
         const forecast = forecastSource.getForecast(this.props.lat, this.props.lon);
         this.setState({
             isLoading: false,
